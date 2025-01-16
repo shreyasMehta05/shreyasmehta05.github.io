@@ -257,13 +257,14 @@ const Resume = () => {
         <button
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg inline-flex items-center gap-2 transition-all duration-300"
           onClick={() => {
-            const resumeUrl = "../../public/Shreyas_2023101059.pdf";  // Ensure the correct path
-            const a = document.createElement("a");
-            a.href = resumeUrl;
-            a.download = "Shreyas_Resume.pdf"; // Optional: You can specify the filename here
-            a.target = "_blank"; // This ensures it opens in a new tab
-            a.click();
-          }}
+          const resumeUrl = "/Shreyas_2023101059.pdf";  // Use an absolute path since it's in the public folder
+          const a = document.createElement("a");
+          a.href = resumeUrl;
+          a.download = "Shreyas_Resume.pdf"; // Optional: You can specify the filename here
+          a.target = "_blank"; // This ensures it opens in a new tab
+          a.click();
+        }}
+
         >
           <Download className="w-4 h-4" />
           Download Resume
